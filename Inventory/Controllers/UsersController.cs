@@ -8,6 +8,7 @@ using System.Text;
 
 namespace Inventory.Controllers
 {
+
     [Route("api/[controller]")]
     [ApiController]
     public class UsersController : ControllerBase
