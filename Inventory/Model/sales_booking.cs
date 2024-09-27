@@ -1,10 +1,12 @@
-﻿using System.Diagnostics.Contracts;
+﻿using System.ComponentModel.DataAnnotations;
+using System.Diagnostics.Contracts;
 using System.Reflection.Metadata;
 
 namespace Inventory.Model
 {
     public class sales_booking
     {
+        [Key]
         public int bookingId {  get; set; }
         public string trnno {  get; set; }
         public decimal totalAmt { get; set; }
@@ -17,6 +19,7 @@ namespace Inventory.Model
         public string customerCode { get; set; }
         public string status {  get; set; }
         public string remarks {  get; set; }
+        public decimal payment {  get; set; }
         public List<sales_booking_details> bookingDetails { get; set; }
     }
   

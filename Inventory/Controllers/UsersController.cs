@@ -88,7 +88,7 @@ namespace Inventory.Controllers
         }
         
         [HttpGet]
-        [Route("edit")]
+        [Route("edit_data_for_user")]
         public IActionResult GetEditDataById(int id)
         {
             var user=dbContex.Users.FirstOrDefault(x=>x.userId== id);

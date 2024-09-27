@@ -1,7 +1,10 @@
-﻿namespace Inventory.Model
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace Inventory.Model
 {
     public class sales_booking_details
     {
+        [Key]
         public int bookinDetailsId { get; set; }
         public int bookingId { get; set; }
         public string trnno { get; set; }

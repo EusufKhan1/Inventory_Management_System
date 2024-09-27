@@ -1,8 +1,24 @@
 [
   {
+    "ContainingType": "Inventory.Controllers.ItemManage.ProductEntryController",
+    "Method": "SaveProduct",
+    "RelativePath": "api/ProductEntry/add_product",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "model",
+        "Type": "Inventory.Model.item_master",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "Inventory.Controllers.UsersController",
     "Method": "GetEditDataById",
-    "RelativePath": "api/Users/edit",
+    "RelativePath": "api/Users/edit_data_for_user",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,

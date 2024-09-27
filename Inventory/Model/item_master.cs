@@ -1,8 +1,11 @@
-﻿namespace Inventory.Model
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace Inventory.Model
 {
     public class item_master
     {
-        public int productId { get; set; } 
+        [Key]
+        public int productId { get; set; } //Primary Key
         public string itemCode {  get; set; }
         public string itemName { get; set; }
         public string unit {  get; set; }
