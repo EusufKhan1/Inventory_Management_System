@@ -21,7 +21,7 @@ namespace Inventory.Controllers.Sales
             {
                 if (model.bookingDetails == null || model.bookingDetails.Count == 0) return BadRequest("Please Select Minimum One Details!!");
                 else if (model.totalAmt <= 0) return BadRequest("Total Amount Must Be Greater Zero");
-
+                model.trnno= DateTime.Now.ToString("yyyyMMddHHmmssfff") + new Random().Next(1000, 9999).ToString();
                 dbContex.sales_booking.Add(new sales_booking
                 {
                     bookingId= model.bookingId,
