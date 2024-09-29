@@ -4,13 +4,14 @@ using Microsoft.EntityFrameworkCore;
 
 namespace Inventory.Services.ItemsManage
 {
-    public class ProductEntryServices 
+    public class ProductEntryServices : IProductEntryServices 
     {
-        private readonly MyDbContex dbContex;    
-        //public ProductEntryServices(MyDbContex dbContex)
-        //{
-        //    this.dbContex = dbContex;
-        //}
+        
+        private readonly MyDbContex dbContex;
+        public ProductEntryServices(MyDbContex dbContex)
+        {
+            this.dbContex = dbContex;
+        }
         public string SaveProduct(item_master model)
         {
             try

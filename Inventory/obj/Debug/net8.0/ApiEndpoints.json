@@ -16,6 +16,86 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "Inventory.Controllers.ItemManage.ProductEntryController",
+    "Method": "deleteProducts",
+    "RelativePath": "api/ProductEntry/delete_product",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "productIdl",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Inventory.Controllers.ItemManage.ProductEntryController",
+    "Method": "getProduct",
+    "RelativePath": "api/ProductEntry/get_product",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "productId",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Inventory.Controllers.ItemManage.ProductEntryController",
+    "Method": "getProductList",
+    "RelativePath": "api/ProductEntry/product_list",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "searchVal",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Inventory.Controllers.ItemManage.ProductEntryController",
+    "Method": "updateProducts",
+    "RelativePath": "api/ProductEntry/update_product",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "model",
+        "Type": "Inventory.Model.item_master",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Inventory.Controllers.Sales.SalesBookingController",
+    "Method": "SaveBooking",
+    "RelativePath": "api/SalesBooking/add_booking",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "model",
+        "Type": "Inventory.Model.sales_booking",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "Inventory.Controllers.UsersController",
     "Method": "GetEditDataById",
     "RelativePath": "api/Users/edit_data_for_user",
