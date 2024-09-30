@@ -1,5 +1,53 @@
 [
   {
+    "ContainingType": "Inventory.Controllers.Customer.CustomerController",
+    "Method": "CustomerSave",
+    "RelativePath": "api/Customer/add_cusotmer",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "model",
+        "Type": "Inventory.Model.customer",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Inventory.Controllers.Customer.CustomerController",
+    "Method": "deleteCustomer",
+    "RelativePath": "api/Customer/delete_customer",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "cusId",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Inventory.Controllers.Customer.CustomerController",
+    "Method": "updateCustomer",
+    "RelativePath": "api/Customer/update_customer",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "model",
+        "Type": "Inventory.Model.customer",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "Inventory.Controllers.ItemManage.ProdcutReceiveController",
     "Method": "StockReceive",
     "RelativePath": "api/ProdcutReceive/stock_receive",
