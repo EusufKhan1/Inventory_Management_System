@@ -4,6 +4,7 @@ using Inventory.Services.ItemsManage;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Http.HttpResults;
 using Microsoft.AspNetCore.Mvc;
+using System.Reflection.Metadata;
 
 
 namespace Inventory.Controllers.ItemManage
@@ -158,6 +159,7 @@ namespace Inventory.Controllers.ItemManage
         {
             try
             {
+                if (searchVal == null) searchVal = "";
                 var product = dbContex.item_master.Where(e => e.itemCode.ToLower().Contains(searchVal.ToLower()) ||  e.itemName.ToLower().Contains(searchVal.ToLower())).OrderByDescending(e=>e.productId).ToList();
                 if (product != null)
                 {

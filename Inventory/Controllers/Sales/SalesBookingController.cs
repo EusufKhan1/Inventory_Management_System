@@ -141,6 +141,77 @@ namespace Inventory.Controllers.Sales
             }
         }
 
+        [HttpGet]
+        [Route("booking_list")]
+        public IActionResult GetBookingList(string searchVal)
+        {
+            try
+            {
+                if (searchVal == null) searchVal = "";
+                var booking = dbContex.sales_booking.Where(e => e.trnno.ToLower().Contains(searchVal.ToLower())).OrderByDescending(e => e.bookingId).ToList();
+                if (booking != null)
+                {
+                    return Ok(booking);
+                }
+                else return NotFound("Any Booking Not Found");
+
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
+        }
+        /// <summary>
+        /// Booking Confirm
+        /// </summary>
+        /// <param name="bookingId"></param>
+        /// <returns></returns>
+        [HttpPut]
+        [Route("confirm_booking")]
+        public IActionResult BookingConfirm(int bookingId)
+        {
+            try
+            {
+                var bookingDetails = dbContex.sales_booking_details.Where(x => x.bookingId == bookingId).ToList();
+                if (bookingDetails != null)
+                {
+                    foreach (var item in bookingDetails)
+                    {
+                        var stockCheck= dbContex.product_stock.Where(x => x.productId == item.productId).ToList();
+                        if (stockCheck[0].stockQty < item.quantity)
+                        {
+                            return BadRequest($"Stock Is Not Available For ItemCode :{item.productCode}");
+                        }
+                    }
+                    foreach (var item in bookingDetails)
+                    {
+                        var stockCheck = dbContex.product_stock.Where(x => x.productId == item.productId).ToList();
+                        var updateStock = dbContex.product_stock.Find(stockCheck[0].stock_id);
+
+                        decimal previousStcok = updateStock.stockQty;
+                        decimal newStock = previousStcok - item.quantity;
+                        updateStock.stockQty = newStock;
+                        var output1 = dbContex.SaveChanges();
+                    }
+                }
+
+                var booking = dbContex.sales_booking.Find(bookingId);
+
+                booking.status = "Confirmed";
+                var output= dbContex.SaveChanges();
+                return Ok("Booking Confirm Successfully!!");
+
+
+
+
+            }
+            catch(Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
+        }
+        
+
 
     }
 }

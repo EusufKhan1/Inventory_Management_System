@@ -1,5 +1,21 @@
 [
   {
+    "ContainingType": "Inventory.Controllers.ItemManage.ProdcutReceiveController",
+    "Method": "StockReceive",
+    "RelativePath": "api/ProdcutReceive/stock_receive",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "model",
+        "Type": "Inventory.Model.product_stock",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "Inventory.Controllers.ItemManage.ProductEntryController",
     "Method": "SaveProduct",
     "RelativePath": "api/ProductEntry/add_product",
@@ -97,9 +113,57 @@
   },
   {
     "ContainingType": "Inventory.Controllers.Sales.SalesBookingController",
+    "Method": "GetBookingList",
+    "RelativePath": "api/SalesBooking/booking_list",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "searchVal",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Inventory.Controllers.Sales.SalesBookingController",
+    "Method": "BookingConfirm",
+    "RelativePath": "api/SalesBooking/confirm_booking",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "bookingId",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Inventory.Controllers.Sales.SalesBookingController",
     "Method": "deleteBooking",
     "RelativePath": "api/SalesBooking/delete_booking",
     "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "bookingId",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Inventory.Controllers.Sales.SalesBookingController",
+    "Method": "getBookingDetails",
+    "RelativePath": "api/SalesBooking/get_details",
+    "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
     "Parameters": [
