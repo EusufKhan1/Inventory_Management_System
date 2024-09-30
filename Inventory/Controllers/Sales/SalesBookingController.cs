@@ -13,6 +13,11 @@ namespace Inventory.Controllers.Sales
         {
             this.dbContex = dbContex;
         }
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="model"></param>
+        /// <returns></returns>
         [HttpPost]
         [Route("add_booking")]
         public IActionResult SaveBooking(sales_booking model)

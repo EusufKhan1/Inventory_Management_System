@@ -49,6 +49,22 @@
   },
   {
     "ContainingType": "Inventory.Controllers.ItemManage.ProdcutReceiveController",
+    "Method": "GetItemStock",
+    "RelativePath": "api/ProdcutReceive/item_stock",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "productId",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Inventory.Controllers.ItemManage.ProdcutReceiveController",
     "Method": "StockReceive",
     "RelativePath": "api/ProdcutReceive/stock_receive",
     "HttpMethod": "POST",

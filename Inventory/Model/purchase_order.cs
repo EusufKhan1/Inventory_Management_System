@@ -17,6 +17,6 @@ namespace Inventory.Model
         public string status { get; set; }
         public string remarks { get; set; }
         public decimal payment { get; set; }
-       // public List<purchase_order_details> Details { get; set; }
+        public List<purchase_order_details> Details { get; set; }
     }
 }
