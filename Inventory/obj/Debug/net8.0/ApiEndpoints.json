@@ -96,6 +96,22 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "Inventory.Controllers.Sales.SalesBookingController",
+    "Method": "deleteBooking",
+    "RelativePath": "api/SalesBooking/delete_booking",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "bookingId",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "Inventory.Controllers.UsersController",
     "Method": "GetEditDataById",
     "RelativePath": "api/Users/edit_data_for_user",
