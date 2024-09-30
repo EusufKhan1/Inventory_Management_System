@@ -207,8 +207,6 @@ namespace Inventory.Controllers.Sales
                 return Ok("Booking Confirm Successfully!!");
 
 
-
-
             }
             catch(Exception ex)
             {

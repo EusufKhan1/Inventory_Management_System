@@ -13,7 +13,11 @@ namespace Inventory.Controllers.purchase
         {
             this.dbContex = dbContex;
         }
-
+        /// <summary>
+        /// New Purchase Add
+        /// </summary>
+        /// <param name="model"></param>
+        /// <returns></returns>
         [HttpPost]
         [Route("add_purchase")]
         public IActionResult SaveBooking(purchase_order model)
@@ -28,7 +32,7 @@ namespace Inventory.Controllers.purchase
 
                 dbContex.purchase_order.Add(new purchase_order
                 {
-                    //bookingId= model.bookingId,
+                    
                     trnno = model.trnno,
                     totalAmt = model.totalAmt,
                     extraCarringCharge = model.extraCarringCharge,
@@ -44,7 +48,7 @@ namespace Inventory.Controllers.purchase
                 var output = dbContex.SaveChanges();
 
                 int id = dbContex.purchase_order.Max(x => x.purId);
-                //if (id == null) id = 0;
+
                 model.purId = id;
 
                 if (output == 1)
